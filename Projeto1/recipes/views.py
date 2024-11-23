@@ -2,7 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse('Home1')
+    return render(request, 'recipes/home.html', context={
+        'name': 'Junior'
+    })
 
 def contato(request):
     return HttpResponse('contato1')
